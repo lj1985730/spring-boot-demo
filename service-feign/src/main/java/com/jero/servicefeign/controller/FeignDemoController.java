@@ -1,22 +1,22 @@
-package com.jero.serviceribbon.controller;
+package com.jero.servicefeign.controller;
 
-import com.jero.serviceribbon.service.DemoService;
+import com.jero.servicefeign.service.FeignDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DemoController {
+public class FeignDemoController {
 
-    private final DemoService service;
+    private final FeignDemoService service;
 
     @Autowired
-    public DemoController(DemoService service) {
+    public FeignDemoController(FeignDemoService service) {
         this.service = service;
     }
 
     @GetMapping("/name")
     public String getName() {
-        return service.getName();
+        return this.service.getName();
     }
 }

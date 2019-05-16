@@ -5,12 +5,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class DemoService {
+public class RibbonDemoService {
 
     private final RestTemplate restTemplate;
 
     @Autowired
-    public DemoService(RestTemplate restTemplate) {
+    public RibbonDemoService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 

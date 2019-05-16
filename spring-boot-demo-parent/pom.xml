@@ -64,6 +64,7 @@
     <module>../eureka-client1</module>
     <module>../eureka-client2</module>
     <module>../service-ribbon</module>
+    <module>../service-feign</module>
   </modules>
 
 </project>
